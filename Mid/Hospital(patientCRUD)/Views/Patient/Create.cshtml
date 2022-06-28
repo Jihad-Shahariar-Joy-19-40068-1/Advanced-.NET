@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<center>
+    <h2>Create New Patient</h2>
+    <form action="/Patient/Create" method="post">
+        Name <input type="text" name="Name" class="form-control" value="@Model.Name" placeholder="Name" />
+        <label class="text-danger">@Html.ValidationMessage("Name")</label><br />
+        Date of Birth <input type="date" name="Dob" class="form-control" value="@Model.Dob" />
+        <label class="text-danger">@Html.ValidationMessage("Dob")</label><br />
+        Email <input type="text" name="Email" class="form-control" value="@Model.Email" placeholder="Email" />
+        <label class="text-danger">@Html.ValidationMessage("Email")</label><br /><br />
+        <input type="submit" value="Create" class="btn btn-success" />
+    </form>
+</center>

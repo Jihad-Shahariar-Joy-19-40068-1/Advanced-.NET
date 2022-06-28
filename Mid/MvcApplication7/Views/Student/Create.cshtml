@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Student</h2>
+<form action="" method="Post">
+    ID : <input type="text" name="id" value="" class="form-control" placeholder="ID"/>
+    @Html.ValidationMessage("id",new { @class="text-danger"})<br />
+    Name : <input type="text" name="name" value="@(Model == null ? "" : Model.name)" class="form-control" />
+    @Html.ValidationMessage("name",new { @class="text-danger"})<br />
+    DOB : <input type="date" name="dob" value="" class="form-control"/>
+    @Html.ValidationMessage("dob",new { @class="text-danger"})<br />
+    Email : <input type="text" name="email" value="" class="form-control" placeholder="EMAIL"/>
+    @Html.ValidationMessage("email",new { @class="text-danger"})<br />
+    Gender :  Male <input type="radio" name="gender" value="Male" class="form-control"/>
+            Female <input type="radio" name="gender" value="Female" class="form-control"/>
+    @Html.ValidationMessage("gender",new { @class="text-danger"})<br />
+    Dept : <select name="dept" class="form-control">
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+            </select>
+    @Html.ValidationMessage("dept",new { @class="text-danger"})<br />  
+    <input type="submit" value="Submit"/>
+    
+
+</form>
+
+

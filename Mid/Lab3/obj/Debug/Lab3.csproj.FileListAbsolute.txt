@@ -1,0 +1,7 @@
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\bin\Debug\Lab3.exe.config
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\bin\Debug\Lab3.exe
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\bin\Debug\Lab3.pdb
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\obj\Debug\Lab3.exe
+D:\Downloads\11th Semester\ADV .NET\Projects\Lab3\obj\Debug\Lab3.pdb
