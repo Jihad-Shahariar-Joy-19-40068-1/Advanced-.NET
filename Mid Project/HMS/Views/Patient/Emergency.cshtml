@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Emergency";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+<center>
+<h2>Emergency Visit Corner</h2>
+    <h4 class="text-success">Use this only when in utmost need.</h4>
+
+    <form action="/Patient/Emergency" method="post">
+
+        <div class="form-control" style="font-size:15px;">Your Name :  
+        <b><label> @Model.Name</label></b></div><br />
+        <input type="hidden" name="Name" value="@Model.Name" />
+
+        <div class="form-control" style="font-size:15px;">Your Age :  
+        <b><label> @Model.Age</label></b></div><br />
+        <input type="hidden" name="Age" value="@Model.Age" />
+
+        <div class="form-control" style="font-size:15px;">Your Gender :  
+        <b><label> @Model.Gender</label></b></div><br />
+        <input type="hidden" name="Gender" value="@Model.Gender" />
+
+        <div class="form-control" style="font-size:15px;">Your Email :  
+        <b><label> @Model.Email</label></b></div><br />
+        <input type="hidden" name="Email" value="@Model.Email" />
+
+        <div class="form-control" style="font-size:15px;">Your Phone Number :  
+        <b><label> @Model.Phone_no</label></b></div><br />
+        <input type="hidden" name="Phone_no" value="@Model.Phone_no" />
+
+        <input type="hidden" name="Type" value="@Model.Type" />
+        
+        <div class="form-control" style="font-size:15px;">Your Blood Group :  
+        <b><label> @Model.Blood_group</label></b></div><br />
+        <input type="hidden" name="Blood_group" value="@Model.Blood_group" />
+        
+        <input type="submit" value="Emergency!" class="btn-lg btn btn-danger" />
+    </form>
+</center>

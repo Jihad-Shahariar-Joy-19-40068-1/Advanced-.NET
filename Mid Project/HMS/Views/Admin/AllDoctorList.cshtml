@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "AllDoctorList";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<h2>AllDoctorList</h2>
+
+<center>
+    <h2>Patient List</h2>
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var pt in Model)
+        {
+            <tr>
+                <td>@pt.Name</td>
+                <td>@pt.Age</td>
+                <td>@pt.Blood_group</td>
+                <td><a class="btn btn-sm btn-success" href="/Admin/AddSalary/@pt.Id">Update Salary</a></td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="/Admin/SingleDoctorEdit/@pt.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" href="/Admin/DoctorDelete/@pt.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</center>

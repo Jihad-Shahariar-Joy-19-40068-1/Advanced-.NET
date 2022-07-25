@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "PatientView";
+    Layout = "~/Views/Shared/Doctor.cshtml";
+}
+
+<h2>PatientView</h2>
+<h3 style="border: 1px solid skyblue" ;></h3>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Name :</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Age :</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr>
+        <td>Gender :</td>
+        <td>@Model.Gender</td>
+    </tr>
+
+    <tr>
+        <td>Phone Number :</td>
+        <td>@Model.Phone_no</td>
+    </tr>
+    <tr>
+        <td>Blood Group :</td>
+        <td>@Model.Blood_group</td>
+    </tr>
+</table>

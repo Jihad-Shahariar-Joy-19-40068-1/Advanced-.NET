@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "SinglePatient";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<center>
+    <h2>Patient Profile View</h2>
+    <div class="card" style=" padding:'5px';">
+
+        <div class="card-body">
+            <div class="card-header" style="color:blue">
+                Patient Details
+            </div>
+
+
+            <h5 class="card-title">Name: @Model.Name </h5>
+            <h5 class="card-title">Age: @Model.Age </h5>
+            <h5 class="card-title">Email: @Model.Email </h5>
+            <h5 class="card-title">Phone: @Model.Phone_no</h5>
+            <h5 class="card-title">Blood Group: @Model.Blood_group </h5>
+
+            <a href="/Admin/SinglePatientEdit/@Model.Id" class="btn btn-primary">Edit</a>
+        </div>
+    </div>
+</center>

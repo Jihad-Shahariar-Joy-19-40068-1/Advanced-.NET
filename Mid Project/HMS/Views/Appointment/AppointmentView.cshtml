@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "AppointmentView";
+    Layout = "~/Views/Shared/Doctor.cshtml";
+}
+
+<h2>Viewing Appointment</h2>
+<h3 style="border: 1px solid skyblue" ;></h3>
+<form action="/Appointment/AppointmentView" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <input type="hidden" name="Doctor_Name" value="@Model.Doctor_Name" />
+    <div class="form-control" style="font-size:15px;">Your Name :  <b><label> @Model.Doctor_Name</label></b></div><br />
+
+    <input type="hidden" name="Patient_Name" value="@Model.Patient_Name" />
+    <div class="form-control" style="font-size:15px;">Patient's Name :  <b><label> @Model.Patient_Name</label></b></div><br />
+
+    <input type="hidden" name="Problem_list" value="@Model.Problem_list" />
+    <div class="form-control" style="font-size:15px;">Patient's Problems :  <b><label> @Model.Problem_list</label></b></div><br />
+
+    Give Medicine/Prescription <textarea class="form-control" cols="20" rows="10" name="Prescription" value="@Model.Prescription" placeholder="Medicine/Prescription"></textarea>
+
+    Payment <select id="Payment_status" name="Payment_status" class="form-control">
+        <option value="@Model.Payment_status">Select Payment</option>
+        <option value="1500">New Patient (1500)</option>
+        <option value="1200">Second Visit (1200)</option>
+        <option value="1000">Old Patient (1000)</option>
+    </select>
+
+    <input type="hidden" name="Prescribed" value="Yes" />
+
+    <div class="label">
+        Please Do Not Refresh This Page<br />
+        Make Sure to Enter all Medicine correctly
+    </div><br /><br />
+
+    <input type="submit" value="Prescribe" class="btn-lg btn btn-success" />
+</form>

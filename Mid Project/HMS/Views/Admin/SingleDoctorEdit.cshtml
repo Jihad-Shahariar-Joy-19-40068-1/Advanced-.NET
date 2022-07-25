@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "SingleDoctorEdit";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>SingleDoctorEdit</h2>
+<center style="margin-top:20px">
+    <span class="text-info" style="font-size:22px;color:darkcyan">@TempData["msg"]</span>
+    <h2>Edit @Model.Name Details</h2>
+    <form action="" method="post">
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <input type="text" name="Name" class="form-control" value="@Model.Name" placeholder="Name" />
+        <label class="text-danger">@Html.ValidationMessage("Name")</label><br />
+
+        <input type="hidden" name="Password" value="@Model.Password" />
+
+        <input type="number" name="Age" class="form-control" value="@Model.Age" placeholder="Age" />
+        <label class="text-danger">@Html.ValidationMessage("Age")</label><br />
+
+        <input type="hidden" name="Gender" value="@Model.Gender" />
+
+        <input type="text" name="Email" class="form-control" value="@Model.Email" placeholder="Email" />
+        <label class="text-danger">@Html.ValidationMessage("Email")</label><br />
+
+        <input type="text" name="Phone_no" class="form-control" value="@Model.Phone_no" placeholder="Phone number" />
+        <label class="text-danger">@Html.ValidationMessage("Phone_no")</label><br />
+
+        <input type="text" name="Type" class="form-control" value="@Model.Type" placeholder="User Type" />
+        <input type="text" name="Blood_group" class="form-control" value="@Model.Blood_group" placeholder="Blood Group" />
+        <input type="text" name="Salary" class="form-control" value="@Model.Salary" placeholder="Salary" />
+        <input type="text" name="Department" class="form-control" value="@Model.Department" placeholder="Department" />
+        <input type="text" name="Degree" class="form-control" value="@Model.Degree" placeholder="Degree" />
+
+
+        <input type="submit" value="Confirm Changes" class="btn-lg btn btn-success" />
+    </form>
+</center>

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Problem";
+    Layout = "~/Views/Shared/Doctor.cshtml";
+}
+
+<h2>Problem</h2>
+<h3 style="border: 1px solid skyblue" ;></h3>
+<center>
+    <form action="/Doctor/Problem" method="post">
+        <div>
+            Problem Name<input type="text" class="form-control" name="Problem" value="" placeholder="Problem">
+            <label class="text-danger">@Html.ValidationMessage("Problem")</label><br />
+
+        </div>
+
+        <div>
+            Reasons are<input type="text" class="form-control" cols="20" rows="15" name="Reason" value="" placeholder="Reason">
+            <label class="text-danger">@Html.ValidationMessage("Reason")</label><br />
+        </div>
+
+        <div>
+            Room Number<input type="text" class="form-control" name="Room_no" value="" placeholder="Room_no">
+            <label class="text-danger">@Html.ValidationMessage("Room_no")</label><br />
+        </div>
+
+
+        <input type="hidden" class="form-control" name="Name" value="@TempData["msg"]">
+
+        <input type="submit" value="Send" class="btn btn-success" />
+    </form>
+</center>

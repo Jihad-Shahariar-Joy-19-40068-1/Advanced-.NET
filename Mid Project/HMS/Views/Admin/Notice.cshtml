@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Notice";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<body>
+    <span class="text-info" style="font-size:23px;color:green">@TempData["msg"]</span>
+    <h2>Notice</h2>
+    <div class="card text-center">
+        <table class="table" style="width:90%">
+            
+                <tr>
+                    <th>Number</th>
+                    <th>Title</th>
+                    <th>Details</th>
+                    <th>Action</th>
+                </tr>
+            
+            
+                @foreach (var pt in Model)
+                {
+                    <tr>
+                        <th>@pt.Id</th>
+                        <td> @pt.Title</td>
+                        <td>@pt.Details</td>
+                        <td>
+                            <a href="/Admin/Delete/@pt.Id" class="btn btn-danger"> Delete</a>
+                            <a href="/Admin/NoticeEdit/@pt.Id" class="btn btn-primary"> Edit</a>
+                        </td>
+
+                    </tr>
+                }
+
+           
+        </table>
+
+
+    </div>
+</body>

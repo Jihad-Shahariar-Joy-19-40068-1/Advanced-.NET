@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "DoctorProblems";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>DoctorProblems</h2>
+<h3 style="border: 1px solid skyblue" ;></h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Doctor's Name</th>
+        <th>Probelm</th>
+        <th>Reason</th>
+        <th>Room_no</th>
+        <th>If Solved.</th>
+
+    </tr>
+    @foreach (var pt in Model)
+    {
+        <tr>
+            <th>@pt.Id</th>
+            <th>@pt.Name</th>
+            <td>@pt.Problem</td>
+            <td>@pt.Reason</td>
+            <td>@pt.Room_no</td>
+            <td><a class="btn btn-sm btn-danger" href="/Admin/DoctorProblemDelete/@pt.Id">Delete</a></td>
+
+        </tr>
+    }
+</table>

@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "AppointmentEdit";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<body>
+    <center>
+        <h2>AppointmentEdit</h2>
+        <div class="card text-center">
+            <form action="" method="post">
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Doctor_Name" value="@Model.Doctor_Name">
+                </div>
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Patient_Name" value="@Model.Patient_Name">
+                </div>
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Prescription" value="@Model.Prescription" placeholder="Prescription">
+                </div>
+                <div class="mb-3" style="margin-top:5px; margin-bottom:5px">
+
+                    @*<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>*@
+                    <textarea class="form-control" name="Problem_list" rows="3" value="@Model.Problem_list">@Model.Problem_list</textarea>
+                </div>
+
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Prescription_File" value="@Model.Prescription_File" placeholder="Prescription_File">
+                </div>
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Payment_status" value="@Model.Payment_status" placeholder="Payment_status">
+                </div>
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Prescribed" value="@Model.Prescribed">
+                </div>
+                <div class="mb-3" style="text-align:left">
+                    <input type="submit" value="Save Changes" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </center>
+</body>

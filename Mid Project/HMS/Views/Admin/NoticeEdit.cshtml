@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "NoticeEdit";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<body>
+    <center>
+
+        <h2>NoticeEdit</h2>
+
+        <div class="card text-center">
+            <form action="" method="post">
+                <div class="mb-3">
+                    @* <label for="exampleFormControlInput1" class="form-label">Email address</label>*@
+                    <input type="text" class="form-control" name="Title" value="@Model.Title">
+                </div>
+
+                <div class="mb-3" style="margin-top:5px; margin-bottom:5px">
+
+                    @*<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>*@
+                    <textarea class="form-control" name="Details" value="@Model.Details" rows="3"> @Model.Details</textarea>
+                </div>
+                <div class="mb-3" style="margin-top:5px; margin-bottom:5px">
+
+                    @*<label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>*@
+                    <select name="Type" class="form-control">
+                        <option value="@Model.Type">@Model.Type</option>
+                        <option value="P">All User</option>
+                        <option value="D">Doctor</option>
+
+                    </select>
+                </div>
+                <div class="mb-3" style="text-align:left">
+                    <input type="submit" value="Save Changes" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </center>
+</body>

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "EmergencyPatient";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<center style="margin-top:20px">
+    <h2>EmergencyPatient</h2>
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Phone_no</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var emrgency in Model)
+        {
+            <tr>
+                <td>@emrgency.Name</td>
+                <td>@emrgency.Age</td>
+                <td>@emrgency.Blood_group</td>
+                <td>@emrgency.Gender</td>
+                <td>@emrgency.Email</td>
+                <td>@emrgency.Phone_no</td>
+
+                <td>
+                    <a class="btn btn-sm btn-danger" href="/Admin/DoctorDelete/@emrgency.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</center>

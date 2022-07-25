@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Appointment_View";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+<center>
+    <h2>Appointment View/Prescription</h2>
+    @*<h5>The downest is the Latest</h5>*@
+
+        <div class="form-control" style="font-size:15px;">Doctor's Name :  
+        <b><label> @Model.Doctor_Name</label></b></div><br />
+
+        <div class="form-control" style="font-size:15px;">Patient/Your Name :  
+        <b><label> @Model.Patient_Name</label></b></div><br />
+
+        <div class="form-control" style="font-size:15px;">Problems :  
+        <b><label> @Model.Problem_list</label></b></div><br />
+
+        <div class="form-control" style="font-size:18px;">Prescribed? :  
+        <b><label> @Model.Prescribed</label></b></div><br />
+
+        <div class="form-control" style="font-size:15px;">Prescription :  
+        <b><label> @Model.Prescription</label></b></div><br />
+
+        <div class="form-control" style="font-size:15px;">Payment :  
+        <b><label> @Model.Payment_status</label></b></div><br />
+
+</center>

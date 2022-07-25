@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "DonorView";
+    Layout = "~/Views/Shared/Doctor.cshtml";
+}
+
+<center>
+    <h2>Viewing Donor's Information</h2>
+    <form action="/Doctor/DonorView" method="post">
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <input type="hidden" name="Name" value="@Model.Name" />
+        <div class="form-control" style="font-size:15px;">Donor's Name :  <b><label> @Model.Name</label></b></div><br />
+
+        <input type="hidden" name="Age" value="@Model.Age" />
+        <div class="form-control" style="font-size:15px;">Donor's Age:  <b><label> @Model.Age</label></b></div><br />
+
+        <input type="hidden" name="Gender" value="@Model.Gender" />
+        <div class="form-control" style="font-size:15px;">Donor's Gender:  <b><label> @Model.Gender</label></b></div><br />
+
+        <input type="hidden" name="Phone_no" value="@Model.Phone_no" />
+        <div class="form-control" style="font-size:15px;">Donor's Phone Number:  <b><label> @Model.Phone_no</label></b></div><br />
+
+        <input type="hidden" name="Blood_group" value="@Model.Blood_group" />
+        <div class="form-control" style="font-size:15px;">Donor's Blood Group:  <b><label> @Model.Blood_group</label></b></div><br />
+
+        <input type="hidden" name="Organ_type" value="@Model.Organ_type" />
+        <div class="form-control" style="font-size:15px; color:crimson;">Donor's Organ Type:  <b><label> @Model.Organ_type</label></b></div><br />
+
+        <input type="hidden" name="Blood_pressure" value="@Model.Blood_pressure" />
+        <div class="form-control" style="font-size:15px;">Donor's Blood Pressure :  <b><label> @Model.Blood_pressure</label></b></div><br />
+
+        <input type="hidden" name="Diabetes" value="@Model.Diabetes" />
+        <div class="form-control" style="font-size:15px;">Diabetes :  <b><label> @Model.Diabetes</label></b></div><br />
+
+        <input type="hidden" name="Allergy" value="@Model.Allergy" />
+        <div class="form-control" style="font-size:15px;">Allergy :  <b><label> @Model.Allergy</label></b></div><br />
+
+        <input type="hidden" name="Asthama" value="@Model.Asthama" />
+        <div class="form-control" style="font-size:15px;">Asthama :  <b><label> @Model.Asthama</label></b></div><br />
+
+        <div style="width: 200px; border:5px; border-color:black;">
+            Approve? :<input type="radio" name="Approval" value="Yes" /> Yes
+                      <input type="radio" name="Approval" value="No" /> No
+        </div><br />
+
+        <input type="hidden" name="Approved_by" value="@Session["Name"]" />
+
+        Provide Location to Donate <textarea class="form-control" cols="20" rows="10" name="Location" value="" placeholder="Location & date to donate"></textarea>
+       <br />
+
+        <input type="submit" value="Update" class="btn-lg btn btn-success" />
+    </form>
+</center>

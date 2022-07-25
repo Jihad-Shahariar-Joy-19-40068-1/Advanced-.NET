@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Make";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+<center>
+    <h2>Make Appointment</h2>
+    <form action="/Appointment/Make" method="post">
+
+        <input type="hidden" name="Doctor_Name" value="@Model.Name" />
+        <div class="form-control" style="font-size:18px;">Doctor's Name :  <b><label> @Model.Name</label></b></div><br />
+
+        <div class="form-control" style="font-size:18px;">Patient's Name :  <b><label> @TempData["msg"]</label></b></div><br />
+        <input type="hidden" name="Patient_Name" value="@TempData["msg"]" />
+        @*<label class="text-danger">@Html.ValidationMessage("Email")</label>*@<br />
+
+        Your Problems<textarea class="form-control" cols="20" rows="15" name="Problem_list" value="" placeholder="State Your Problems"></textarea>
+        @*<label class="text-danger">@Html.ValidationMessage("Email")</label>*@<br />
+        <input type="hidden" name="Prescribed" value="No" />
+
+        <div class="form-control" style="font-size:20px; color: red; font:italic;">
+            Please Do Not Refresh This Page
+        </div><br />
+
+        <input type="submit" value="Confirm Appointmemnt" class="btn-lg btn btn-success" />
+    </form>
+</center>

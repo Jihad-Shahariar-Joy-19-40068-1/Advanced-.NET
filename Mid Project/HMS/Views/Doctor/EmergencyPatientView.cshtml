@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "EmergencyPatientView";
+    Layout = "~/Views/Shared/Doctor.cshtml";
+}
+
+<h2>Viewing Emergency Patient</h2>
+<h3 style="border: 1px solid skyblue" ;></h3>
+    
+    <div class="form-control" style="font-size:15px;">Patient's Name :  <b><label> @Model.Name</label></b></div><br />
+    
+    <div class="form-control" style="font-size:15px;">Patient's Age :  <b><label> @Model.Age</label></b></div><br />
+    
+    <div class="form-control" style="font-size:15px;">Patient's Gender :  <b><label> @Model.Gender</label></b></div><br />
+    
+    <div class="form-control" style="font-size:15px;">Patient's Email :  <b><label> @Model.Email</label></b></div><br />
+    
+   <div class="form-control" style="font-size:15px;">Patient's Phone number :  <b><label> @Model.Phone_no</label></b></div><br />
+
+   <div class="form-control" style="font-size:15px;">Patient's Blood group :  <b><label> @Model.Blood_group</label></b></div><br />
+    
+    <center><a class="btn btn-lg btn-danger" href="/Doctor/Edelete/@Model.Id">Delete</a></center>

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AddSalary";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<center style="margin-top:20px">
+
+    <span class="text-info" style="font-size:22px;color:darkcyan">@TempData["msg"]</span>
+    <h2>Add @Model.Name Salary</h2>
+    <form action="" method="post">
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <input type="hidden" name="Name" class="form-control" value="@Model.Name" placeholder="Name" />
+        <br />
+
+        <input type="hidden" name="Password" value="@Model.Password" />
+
+        <input type="hidden" name="Age" class="form-control" value="@Model.Age" placeholder="Age" />
+        <br />
+
+        <input type="hidden" name="Gender" value="@Model.Gender" />
+
+        <input type="hidden" name="Email" class="form-control" value="@Model.Email" placeholder="Email" />
+        <br />
+
+        <input type="hidden" name="Phone_no" class="form-control" value="@Model.Phone_no" placeholder="Phone number" />
+        <br />
+
+        <input type="hidden" name="Type" class="form-control" value="@Model.Type" placeholder="User Type" />
+        <input type="hidden" name="Blood_group" class="form-control" value="@Model.Blood_group" placeholder="Blood Group" />
+        <input type="text" name="Salary" class="form-control" value="@Model.Salary" placeholder="Salary" />
+        <input type="hidden" name="Department" class="form-control" value="@Model.Department" placeholder="Department" />
+        <input type="hidden" name="Degree" class="form-control" value="@Model.Degree" placeholder="Degree" />
+
+
+        <input type="submit" value="Update" class="btn-lg btn btn-success" />
+    </form>
+</center>

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/Doctor.cshtml";
+}
+
+<h2>Doctor Profile</h2>
+<h3 style="border: 2px solid Red" ;></h3>
+
+<table class="table table-bordered">
+    <tr align="center">
+    </tr>
+    <tr align="center">
+        <td>Age :</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr align="center">
+        <td>Gender :</td>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr align="center">
+        <td>Email :</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr align="center">
+        <td>Phone Number :</td>
+        <td>@Model.Phone_no</td>
+    </tr>
+    <tr align="center">
+        <td>Blood Group :</td>
+        <td>@Model.Blood_group</td>
+    <tr align="center">
+        <td>Salary  :</td>
+        <td>@Model.Salary</td>
+    </tr>
+    <tr align="center">
+        <td>Department  :</td>
+        <td>@Model.Department</td>
+    </tr>
+    <tr align="center">
+        <td>Degree  :</td>
+        <td>@Model.Degree</td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <a class="btn btn-success" href="/Doctor/Edit/@Model.Id">Edit Profile</a>
+        </td>
+    </tr>
+</table>

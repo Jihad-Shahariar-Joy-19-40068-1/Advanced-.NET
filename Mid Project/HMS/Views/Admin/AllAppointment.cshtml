@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "AllAppointment";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<center>
+    <h2>AllAppointment</h2>
+    <table class="table table-responsive">
+        <tr>
+            <th>Doctor Name</th>
+            <th>Patient Name</th>
+            <th>Problem list</th>
+            <th>Prescription File</th>
+            <th>Prescription</th>
+            <th>Payment status</th>
+            <th>Prescribed</th>
+            <th>Action</th>
+
+        </tr>
+        @foreach (var apt in Model)
+        {
+            <tr>
+                <td>@apt.Doctor_Name</td>
+                <td>@apt.Patient_Name</td>
+                <td>@apt.Problem_list</td>
+                <td>@apt.Prescription_File</td>
+                <td>@apt.Prescription</td>
+                <td>@apt.Payment_status</td>
+                <td>@apt.Prescribed</td>
+
+                <td>
+                    <a class="btn btn-sm btn-primary" href="/Admin/AppointmentEdit/@apt.Id">Edit</a>
+                    <a class="btn btn-sm btn-danger" href="/Admin/AppointmentDelete/@apt.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</center>

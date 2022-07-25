@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Dashbord";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<h2>Dashbord</h2>
+
+<table class="table table-bordered" align="center" width="500">
+    <tr align="center">
+        <td width="200">Name :</td>
+        <td width="200">@Model.Name</td>
+    </tr>
+    <tr align="center">
+        <td>Age :</td>
+        <td>@Model.Age</td>
+    </tr>
+    <tr align="center">
+        <td>Gender :</td>
+        <td>@Model.Gender</td>
+    </tr>
+    <tr align="center">
+        <td>Email :</td>
+        <td>@Model.Email</td>
+    </tr>
+    <tr align="center">
+        <td>Phone Number :</td>
+        <td>@Model.Phone_no</td>
+    </tr>
+    <tr align="center">
+        <td>Blood Group :</td>
+        <td>@Model.Blood_group</td>
+    </tr>
+    <tr align="center">
+        <td>Id</td>
+        <td>@Model.Id</td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <a class="btn btn-lg btn-primary" href="/Admin/Edit/@Model.Id">Edit Profile</a>
+            @*<a class="btn btn-lg btn-danger" href="/Patient/Delete/@Model.Id">Delete Account</a>*@
+        </td>
+    </tr>
+</table>

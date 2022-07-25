@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Donor_View";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+<h2>Donor_View</h2>
+<center>
+    <h2>View Donor Details</h2>
+
+    <div class="form-control" style="font-size:15px;">Donor Name :  <b><label> @Model.Name</label></b></div><br />
+
+    <div class="form-control" style="font-size:15px;">Donor Age :  <b><label> @Model.Age</label></b></div><br />
+
+    <div class="form-control" style="font-size:15px;">Donor Gender :  <b><label> @Model.Gender</label></b></div><br />
+
+    <div class="form-control" style="font-size:15px;">Donor Phone Number :  <b><label> @Model.Phone_no</label></b></div><br />
+
+    <div class="form-control" style="font-size:15px;">Donor Blood  Group :  <b><label> @Model.Blood_group</label></b></div><br />
+
+    <div class="form-control" style="font-size:15px;">Organ type :  <b><label> @Model.Organ_type</label></b></div><br />
+
+    <div class="form-control" style="font-size:15px;">Approved By :  <b><label> @Model.Approved_by</label></b></div><br />
+
+    <div class="container table-bordered"  style="font-size:15px;">You can Either Contact the Donor by his Phone Number <br />
+    Otherwise you can go to this given Location <br />
+    <b><label> @Model.Location</label></b></div><br />
+</center>

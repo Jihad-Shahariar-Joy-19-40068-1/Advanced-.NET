@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<center><h1>Hospital Management System(HMS)</h1></center>
+<h5 style="border: 2px solid Red"></h5>
+<form action="" method="post">
+    <div class="container" style="height: 400px; width: 500px; background-color: powderblue;">
+        <br />
+        <br />
+        <br />
+        <center><h5 style="color:blue"><label for="email"><b>Email</b></label></h5></center>
+        <center><input type="email" name="Email" placeholder="Email" class="form-control" /></center><br />
+        <center><h5 style="color:blue"><label for="password"><b>Password</b></label></h5></center>
+        <center><input type="password" name="Password" placeholder="Enter your password" class="form-control" /></center>
+        <br /><br /><br />
+        <center><input type="submit" value="Log-in" class="btn btn-success btn-lg" /></center>
+    </div>
+    <center><span class="text-success" style="font-size:20px;">@TempData["reg"]</span></center>
+    <center><span class="text-danger" style="font-size:20px;">@TempData["msg"]</span></center>
+</form>
