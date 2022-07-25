@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "AppointmentHistory";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+
+<center>
+    <h2>Appointment History</h2>
+    <table class="table table-responsive">
+        <tr>
+            @*<th>Doctor's Name</th>*@
+            <th>Doctor's Name</th>
+            <th>Prescribed ?</th>
+            @*<th>Problems</th>
+                <th>Prescription</th>
+                <th>Payment</th>*@
+            <th>Action</th>
+        </tr>
+        @foreach (var ap in Model)
+        {
+            <tr>
+                @*<td>@ap.Doctor_Name</td>*@
+                <td>@ap.Doctor_Name</td>
+                <td>@ap.Prescribed</td>
+                @*<td>@ap.Problem_list</td>
+                    <td>@ap.Prescription</td>
+                    <td>@ap.Payment_status</td>*@
+                <td>
+                    <a class="btn btn-sm btn-primary" href="/Appointment/Appointment_View/@ap.Id">View Appointment</a>
+                </td>
+            </tr>
+        }
+    </table>
+</center>

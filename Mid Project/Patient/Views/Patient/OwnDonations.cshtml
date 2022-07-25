@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "OwnDonations";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+<center>
+    <center><span class="text-success" style="font-size:20px;">@TempData["D_app"]</span></center>
+    <h2>Own Donations</h2>
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Organ Type</th>
+            <th>Approved ?</th>
+            <th>Checked By</th>
+            <th>Donation Location</th>
+
+            <th></th>
+        </tr>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.Name</td>
+                <td>@d.Organ_type</td>
+                <td>@d.Approval</td>
+                <td>@d.Approved_by</td>
+                <td>@d.Location</td>
+            </tr>
+        }
+    </table>
+</center>

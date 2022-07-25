@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "DonorApplication";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+
+<center>
+    <h2>Apply As A Donor</h2>
+
+    <form action="/Patient/DonorApplication" method="post">
+
+        <input type="hidden" name="Name" value="@Model.Name" />
+        <div class="form-control" style="font-size:15px;">Your Name :  <b><label> @Model.Name</label></b></div><br />
+
+        <input type="hidden" name="Age" value="@Model.Age" />
+        <div class="form-control" style="font-size:15px;">Your Age :  <b><label> @Model.Age</label></b></div><br />
+
+        <input type="hidden" name="Gender" value="@Model.Gender" />
+        <div class="form-control" style="font-size:15px;">Your Gender :  <b><label> @Model.Gender</label></b></div><br />
+
+        <input type="hidden" name="Phone_no" value="@Model.Phone_no" />
+        <div class="form-control" style="font-size:15px;">Your Phone Number :  <b><label> @Model.Phone_no</label></b></div><br />
+
+        <input type="hidden" name="Blood_group" value="@Model.Blood_group" />
+        <div class="form-control" style="font-size:15px;">Your Blood Group :  <b><label> @Model.Blood_group</label></b></div><br />
+
+        Enter Organ You want to donate(Blood is also allowed) :<input type="text" name="Organ_type" class="form-control" value="" placeholder="Organ Type" />
+        <label class="text-danger">@Html.ValidationMessage("Organ_type")</label><br />
+
+        Blood Pressure Status :<select id="Blood_pressure" name="Blood_pressure" class="form-control">
+            <option value="">Select Blood Pressure</option>
+            <option value="High">High</option>
+            <option value="Normal">Normal</option>
+            <option value="Low">Low</option>
+        </select>
+        <label class="text-danger">@Html.ValidationMessage("Blood_pressure")</label><br />
+
+        <div style="width: 200px; border:5px; border-color:black;">
+            Diabetis Status :<input type="radio" name="Diabetes" value="Yes" />  Yes
+            <input type="radio" name="Diabetes" value="No" /> No
+        </div>
+        <label class="text-danger">@Html.ValidationMessage("Diabetes")</label><br />
+
+        <div style="width: 200px; border:5px; border-color:black;">
+            Allergy Status :<input type="radio" name="Allergy" value="Yes" />  Yes
+            <input type="radio" name="Allergy" value="No" /> No
+        </div>
+        <label class="text-danger">@Html.ValidationMessage("Allergy")</label><br />
+
+        <div style="width: 200px; border:5px; border-color:black;">
+            Asthama Status :<input type="radio" name="Asthama" value="Yes" />  Yes
+            <input type="radio" name="Asthama" value="No" /> No
+        </div>
+        <label class="text-danger">@Html.ValidationMessage("Asthama")</label><br />
+
+        <input type="hidden" name="Approval" value="Pending" />
+
+        <input type="submit" value="Apply" class="btn btn-lg btn-success" />
+    </form>
+</center>

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "DoctorList";
+    Layout = "~/Views/Shared/Patient.cshtml";
+}
+
+
+<center>
+    <h2>DoctorList</h2>
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Degree</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var dc in Model)
+        {
+            <tr>
+                <td>@dc.Name</td>
+                <td>@dc.Department</td>
+                <td>@dc.Degree</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="/Patient/DoctorView/@dc.Id">See More...</a>
+                </td>
+            </tr>
+        }
+    </table>
+</center>
