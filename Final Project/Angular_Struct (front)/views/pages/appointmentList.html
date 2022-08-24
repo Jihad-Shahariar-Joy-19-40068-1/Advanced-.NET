@@ -1,0 +1,22 @@
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Doctor_Name</th>
+        <th>Patient_Name</th>
+        <th>Problem_List</th>
+        <th>Prescription_File</th>
+        <th>Prescription</th>
+        <th>Payment_status</th>
+        <th>Prescribed</th>
+    </tr>
+    <tr ng-repeat="d in apts">
+        <td>{{d.Id}}</td>
+        <td>{{d.Doctor_Name}}</td>
+        <td>{{d.Patient_Name}}</td>
+        <td>{{d.Problem_List}}</td>
+        <td>{{d.Prescription_File}}</td>
+        <td>{{d.Prescription}}</td>
+        <td>{{d.Payment_status}}</td>
+        <td>{{d.Prescribed}}</td>
+    </tr>
+</table>
